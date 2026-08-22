@@ -13,5 +13,8 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Check notes file
+        run: grep -q "Hello Devops" notes.txt
+
       - name: Run test
-        run: echo "CI pipeline is working!"
+        run: echo "All tests passed!"
