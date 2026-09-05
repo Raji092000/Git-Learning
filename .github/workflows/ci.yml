@@ -15,6 +15,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Build
+        run: echo "Building the project..."
+
       - name: Check notes file
         run: grep -q "Hello Devops" notes.txt
 
