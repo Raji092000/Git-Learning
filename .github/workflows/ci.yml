@@ -6,7 +6,8 @@ on:
       - dev
   pull_request:
     branches:
-      - dev  
+      - dev
+
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -23,3 +24,14 @@ jobs:
 
       - name: Run test
         run: echo "All tests passed!"
+
+      - name: Create package
+        run: |
+          mkdir package
+          cp notes.txt package/
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: git-learning-package
+          path: package/
