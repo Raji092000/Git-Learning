@@ -44,9 +44,12 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Deploy application
+        env:
+          DEPLOY_MESSAGE: ${{ secrets.DEPLOY_MESSAGE }}
         run: |
           mkdir deployed-app
           cp notes.txt deployed-app/
           echo "Starting deployment..."
+          echo "$DEPLOY_MESSAGE"
           echo "Application deployed successfully!"
           ls -la deployed-app
