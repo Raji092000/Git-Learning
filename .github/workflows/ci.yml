@@ -46,10 +46,12 @@ jobs:
       - name: Deploy application
         env:
           DEPLOY_MESSAGE: ${{ secrets.DEPLOY_MESSAGE }}
+          APP_ENV: ${{ vars.APP_ENV }}
         run: |
           mkdir deployed-app
           cp notes.txt deployed-app/
           echo "Starting deployment..."
           echo "$DEPLOY_MESSAGE"
+          echo "Environment: $APP_ENV"
           echo "Application deployed successfully!"
           ls -la deployed-app
