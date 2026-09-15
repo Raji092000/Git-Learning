@@ -38,6 +38,7 @@ jobs:
   deploy:
     needs: test
     runs-on: ubuntu-latest
+    environment: development
 
     steps:
       - name: Checkout repository
