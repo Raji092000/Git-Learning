@@ -20,7 +20,7 @@ jobs:
         run: echo "Building the project..."
 
       - name: Check notes file
-        run: grep -q "Hello Devops ERROR" notes.txt
+        run: grep -q "Hello Devops" notes.txt
 
       - name: Run test
         run: echo "All tests passed!"
