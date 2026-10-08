@@ -7,3 +7,4 @@ Feature branch changeS
 CI practice branch created
 Environment test
 
+Branch protection test
